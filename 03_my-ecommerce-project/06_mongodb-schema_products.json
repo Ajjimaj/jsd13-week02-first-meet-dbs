@@ -1,6 +1,6 @@
 [
   {
-    "productid": "P00001",
+    "_id": "P00001",
     "product_name": "Amethyst",
     "product_type": "Gemstone",
     "price": 299,
@@ -9,7 +9,7 @@
     "picture": "amethyst.jpg"
   },
   {
-    "productid": "P00002",
+    "_id": "P00002",
     "product_name": "Rose Quartz",
     "product_type": "Gemstone",
     "price": 259,
@@ -18,7 +18,7 @@
     "picture": "rose_quartz.jpg"
   },
   {
-    "productid": "P00003",
+    "_id": "P00003",
     "product_name": "Tiger's Eye",
     "product_type": "Gemstone",
     "price": 320,
@@ -27,7 +27,7 @@
     "picture": "tigers_eye.jpg"
   },
   {
-    "productid": "P00004",
+    "_id": "P00004",
     "product_name": "Lapis Lazuli",
     "product_type": "Gemstone",
     "price": 350,
@@ -36,7 +36,7 @@
     "picture": "lapis_lazuli.jpg"
   },
   {
-    "productid": "P00005",
+    "_id": "P00005",
     "product_name": "Black Obsidian",
     "product_type": "Gemstone",
     "price": 280,
@@ -45,7 +45,7 @@
     "picture": "black_obsidian.jpg"
   },
   {
-    "productid": "P00006",
+    "_id": "P00006",
     "product_name": "Citrine",
     "product_type": "Gemstone",
     "price": 390,
@@ -54,7 +54,7 @@
     "picture": "citrine.jpg"
   },
   {
-    "productid": "P00007",
+    "_id": "P00007",
     "product_name": "Malachite",
     "product_type": "Gemstone",
     "price": 450,
@@ -63,7 +63,7 @@
     "picture": "malachite.jpg"
   },
   {
-    "productid": "P00008",
+    "_id": "P00008",
     "product_name": "Clear Quartz",
     "product_type": "Gemstone",
     "price": 240,
@@ -72,7 +72,7 @@
     "picture": "clear_quartz.jpg"
   },
   {
-    "productid": "P00009",
+    "_id": "P00009",
     "product_name": "Green Jade",
     "product_type": "Gemstone",
     "price": 420,
@@ -81,7 +81,7 @@
     "picture": "green_jade.jpg"
   },
   {
-    "productid": "P00010",
+    "_id": "P00010",
     "product_name": "Aquamarine",
     "product_type": "Gemstone",
     "price": 380,

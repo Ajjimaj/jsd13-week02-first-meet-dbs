@@ -1,0 +1,175 @@
+// select the database
+use("my-ecommerce-project");
+
+// clear existing data
+db.orders.deleteMany({});
+
+// insert mock data for Orders collection
+db.orders.insertMany([
+  {
+    _id: "OR001",
+    user_id: "00001",
+    order_date: "2026-07-01",
+    total_price: 299,
+  },
+  {
+    _id: "OR002",
+    user_id: "00002",
+    order_date: "2026-07-01",
+    total_price: 579,
+  },
+  {
+    _id: "OR003",
+    user_id: "00003",
+    order_date: "2026-07-02",
+    total_price: 350,
+  },
+  {
+    _id: "OR004",
+    user_id: "00004",
+    order_date: "2026-07-02",
+    total_price: 990,
+  },
+  {
+    _id: "OR005",
+    user_id: "00005",
+    order_date: "2026-07-03",
+    total_price: 240,
+  },
+  {
+    _id: "OR006",
+    user_id: "00006",
+    order_date: "2026-07-03",
+    total_price: 450,
+  },
+  {
+    _id: "OR007",
+    user_id: "00007",
+    order_date: "2026-07-04",
+    total_price: 639,
+  },
+  {
+    _id: "OR008",
+    user_id: "00008",
+    order_date: "2026-07-04",
+    total_price: 340,
+  },
+  {
+    _id: "OR009",
+    user_id: "00009",
+    order_date: "2026-07-05",
+    total_price: 770,
+  },
+  {
+    _id: "OR010",
+    user_id: "00010",
+    order_date: "2026-07-05",
+    total_price: 1050,
+  },
+  {
+    _id: "OR011",
+    user_id: "00011",
+    order_date: "2026-07-06",
+    total_price: 380,
+  },
+  {
+    _id: "OR012",
+    user_id: "00012",
+    order_date: "2026-07-06",
+    total_price: 539,
+  },
+  {
+    _id: "OR013",
+    user_id: "00013",
+    order_date: "2026-07-07",
+    total_price: 600,
+  },
+  {
+    _id: "OR014",
+    user_id: "00014",
+    order_date: "2026-07-07",
+    total_price: 420,
+  },
+  {
+    _id: "OR015",
+    user_id: "00015",
+    order_date: "2026-07-07",
+    total_price: 670,
+  },
+  {
+    _id: "OR016",
+    user_id: "00016",
+    order_date: "2026-07-08",
+    total_price: 299,
+  },
+  {
+    _id: "OR017",
+    user_id: "00017",
+    order_date: "2026-07-08",
+    total_price: 640,
+  },
+  {
+    _id: "OR018",
+    user_id: "00018",
+    order_date: "2026-07-08",
+    total_price: 390,
+  },
+  {
+    _id: "OR019",
+    user_id: "00019",
+    order_date: "2026-07-09",
+    total_price: 259,
+  },
+  {
+    _id: "OR020",
+    user_id: "00020",
+    order_date: "2026-07-09",
+    total_price: 730,
+  },
+  {
+    _id: "OR021",
+    user_id: "00001",
+    order_date: "2026-07-09",
+    total_price: 320,
+  },
+  {
+    _id: "OR022",
+    user_id: "00003",
+    order_date: "2026-07-09",
+    total_price: 630,
+  },
+  {
+    _id: "OR023",
+    user_id: "00005",
+    order_date: "2026-07-09",
+    total_price: 450,
+  },
+  {
+    _id: "OR024",
+    user_id: "00010",
+    order_date: "2026-07-09",
+    total_price: 280,
+  },
+  {
+    _id: "OR025",
+    user_id: "00012",
+    order_date: "2026-07-09",
+    total_price: 390,
+  },
+]);
+
+// Find all orders
+//db.orders.find({});
+
+// Find all orders and join with user information
+db.orders.aggregate([
+  {
+    $lookup: {
+      from: "users",
+      localField: "user_id",
+      foreignField: "_id",
+      as: "users_info",
+    },
+  },
+  { $unwind: "$users_info" },
+]);

@@ -1,0 +1,111 @@
+use("my-ecommerce-project");
+
+// Clear existing data
+db.products.deleteMany({});
+
+// Insert mock data for Products collection
+db.products.insertMany([
+  {
+    _id: "P00001",
+    product_name: "Amethyst",
+    product_type: "Gemstone",
+    price: 299,
+    stock: 15,
+    description:
+      "A beautiful deep purple amethyst gemstone perfect for calming energy.",
+    picture: "amethyst.jpg",
+  },
+  {
+    _id: "P00002",
+    product_name: "Rose Quartz",
+    product_type: "Gemstone",
+    price: 259,
+    stock: 20,
+    description:
+      "The stone of universal love. It restores trust and harmony in relationships.",
+    picture: "rose_quartz.jpg",
+  },
+  {
+    _id: "P00003",
+    product_name: "Tiger's Eye",
+    product_type: "Gemstone",
+    price: 320,
+    stock: 12,
+    description:
+      "A powerful stone that helps release fear and anxiety, aiding harmony and balance.",
+    picture: "tigers_eye.jpg",
+  },
+  {
+    _id: "P00004",
+    product_name: "Lapis Lazuli",
+    product_type: "Gemstone",
+    price: 350,
+    stock: 8,
+    description:
+      "The stone of wisdom and truth. Boosts intellectual ability and memory.",
+    picture: "lapis_lazuli.jpg",
+  },
+  {
+    _id: "P00005",
+    product_name: "Black Obsidian",
+    product_type: "Gemstone",
+    price: 280,
+    stock: 18,
+    description:
+      "A strongly protective stone, it forms a shield against negativity.",
+    picture: "black_obsidian.jpg",
+  },
+  {
+    _id: "P00006",
+    product_name: "Citrine",
+    product_type: "Gemstone",
+    price: 390,
+    stock: 10,
+    description:
+      "The wealth stone. Attracts prosperity, success, and all good things.",
+    picture: "citrine.jpg",
+  },
+  {
+    _id: "P00007",
+    product_name: "Malachite",
+    product_type: "Gemstone",
+    price: 450,
+    stock: 5,
+    description:
+      "An important protection stone. Absorbs negative energies and pollutants.",
+    picture: "malachite.jpg",
+  },
+  {
+    _id: "P00008",
+    product_name: "Clear Quartz",
+    product_type: "Gemstone",
+    price: 240,
+    stock: 25,
+    description:
+      "The master healer stone. Amplifies energy and thought, and purifies the mind.",
+    picture: "clear_quartz.jpg",
+  },
+  {
+    _id: "P00009",
+    product_name: "Green Jade",
+    product_type: "Gemstone",
+    price: 420,
+    stock: 7,
+    description:
+      "A symbol of serenity and purity. It brings good luck, friendship, and peace.",
+    picture: "green_jade.jpg",
+  },
+  {
+    _id: "P00010",
+    product_name: "Aquamarine",
+    product_type: "Gemstone",
+    price: 380,
+    stock: 14,
+    description:
+      "A stone of courage and serenity. Its calming energies reduce stress and quiet the mind.",
+    picture: "aquamarine.jpg",
+  },
+]);
+
+// Find all products
+db.products.find({});
